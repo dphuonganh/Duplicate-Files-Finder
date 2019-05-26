@@ -39,15 +39,9 @@ def scan_files(path):
     Returns: A flat list of files (ignore symbolic links) scanned recursively
              from this specified path.
     """
-    # return list(filter(lambda x: not islink(x),
-    #                    [join(root, f) for root, _, files in
-    #                     walk(abspath(expanduser(path))) for f in files]))
-    list_files = []
-    for root, _, files in walk(abspath(expanduser(path))):
-        for f in files:
-            if not islink(join(root, f)):
-                list_files.append(join(root, f))
-    return list_files
+    return list(filter(lambda x: not islink(x),
+                       [join(root, f) for root, _, files in
+                        walk(abspath(expanduser(path))) for f in files]))
 
 
 
