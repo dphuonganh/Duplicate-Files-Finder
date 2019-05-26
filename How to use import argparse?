@@ -1,0 +1,19 @@
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--anh', '-a', help='enter 1 integer') # anh là tên file
+parser.add_argument('--path', '--p') 
+"""
+path là tên file
+-- or - sẽ ưu tiên cho 2 gạch chạy trước
+path or p sẽ ưu tiên cho chữ nào sắp xếp đứng trước
+"""
+em = parser.parse_args() # decide
+print (em.anh)
+print (em.path)
+
+How to run ?
+1) python3 test.py -p .
+dấu . là thư mục hiện tại, có thể thay thư mục đó bằng python3 test.py -p ~/Desktop/
+2) nó sẽ hiện lên những file và fonder
+=> nếu là fonder thì hiện những tên trong fonder đó
