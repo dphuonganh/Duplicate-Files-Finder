@@ -1,0 +1,8 @@
+1. chomod +x "file name"
+
+Way 1:
+./duplicate_files_finder.py -p .
+=> Cái dấu chấm này là quét trong file hiện tại
+Way 2:
+./duplicate_files_finder.py -p /etc
+=> Cái /etc này là quét trong file /etc
