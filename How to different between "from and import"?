@@ -2,10 +2,16 @@
 
 #!/usr/bin/env python3
 from argparse import ArgumentParser
+from os import path, walk
 
 
 def parse_arguments():
     parser = ArgumentParser(description='Duplicate Files Finder')
+
+
+def scan_files(path):
+    list_files = []
+    for root, dirnames, files in walk(path):
     
     
     
@@ -13,7 +19,13 @@ def parse_arguments():
 
 #!/usr/bin/env python3
 import argparse
+import os
 
 
 def parse_arguments():
     parser = arparse.ArgumentParser(description='Duplicate Files Finder')
+
+
+def scan_files(path):
+    list_files = []
+    for root, dirnames, files in os.walk(path):
